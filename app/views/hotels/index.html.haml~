@@ -1,0 +1,9 @@
+%br
+- hotel_json
+.container-fluid
+  .container-fluid.col-md-2
+    = render 'search_box'
+    = render 'filter'
+  .container-fluid.col-md-10
+    - @hotels.each do |hotel|      
+      = render 'item', hotel: hotel

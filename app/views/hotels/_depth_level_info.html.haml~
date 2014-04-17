@@ -1,0 +1,44 @@
+- room_json(hotel['hotelId'])
+%table.table.table-hover.table-condensed.hidden-phone
+  %thead
+    %tr
+      %th Available room types
+      %th Persons
+      %th Availability
+      %th Price for 5 nights
+  %tbody
+    - @rooms.each do |room|
+      - puts "room #{room.inspect}"
+      %tr
+        %td
+          %a{:href => "#"}
+            = room['roomTypeDescription'] if room.is_a?(Hash) and room['roomTypeDescription'].present?
+          - maybe = rand(8)
+          - if maybe == 3
+            %small
+              %span.label.label-success
+                Save #{20 + rand(50)}! »
+          - elsif maybe == 2
+            %small
+              %span.label.label-warning Last one! »
+        %td
+          - paxs = 1 + rand(3)
+          - 1.upto(paxs) do
+            %i.icon-user.icon-large
+          - childs = 1
+          - if room['RateInfos']['RateInfo']['RoomGroup']['Room']['numberOfAdults']
+            - childs = #{room['RateInfos']['RateInfo']['RoomGroup']['Room']['numberOfAdults']}.to_i || 1
+            
+      
+          - if childs > 0
+            +
+            - 1.upto(childs) do
+              %i.icon-user
+        %td.text-warning
+          Only #{1 +rand(5)} left
+        %td.text-info
+          - if room.is_a?(Hash)
+            $ #{room['RateInfos']['RateInfo']['ChargeableRateInfo']['@total']} USD
+        %td
+          %small
+            %span.label.label-info Info & Book »
