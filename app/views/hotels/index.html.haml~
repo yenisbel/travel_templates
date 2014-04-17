@@ -1,5 +1,5 @@
-%br
-- hotel_json
+%span.glyphicon.glyphicon-search
+- hotel_json city: 'Syracuse', state: 'NY', contry: 'US'
 .container-fluid
   .container-fluid.col-md-2
     = render 'search_box'

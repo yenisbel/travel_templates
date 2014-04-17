@@ -8,7 +8,6 @@
       %th Price for 5 nights
   %tbody
     - @rooms.each do |room|
-      - puts "room #{room.inspect}"
       %tr
         %td
           %a{:href => "#"}
@@ -24,12 +23,12 @@
         %td
           - paxs = 1 + rand(3)
           - 1.upto(paxs) do
-            %i.icon-user.icon-large
+            %span.glyphicon.glyphicon-user
           - childs = rand(2)
           - if childs > 0
             +
             - 1.upto(childs) do
-              %i.icon-user
+              %span.glyphicon.glyphicon-user
         %td.text-warning
           Only #{1 +rand(5)} left
         %td.text-info

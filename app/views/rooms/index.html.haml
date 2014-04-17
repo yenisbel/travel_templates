@@ -23,12 +23,12 @@
         %td
           - paxs = 1 + rand(3)
           - 1.upto(paxs) do
-            %i.icon-user.icon-large
+            %span.glyphicon.glyphicon-user.glyphicon-large
           - childs = rand(2)
           - if childs > 0
             +
             - 1.upto(childs) do
-              %i.icon-user
+              %span.glyphicon.glyphicon-user.glyphicon-large
         %td.text-warning
           Only #{1 +rand(5)} left
         %td.text-info

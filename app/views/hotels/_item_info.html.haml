@@ -1,13 +1,13 @@
 %h3{:itemprop => "name"}
   = hotel['name']
-  = star = hotel['hotelRating']
+  - star = hotel['hotelRating']
   - 1.upto(star) do
-    %i.icon-star
+    %span.glyphicon.glyphicon-star.glyphicon-large
   %br/
   %small.muted
     = "#{hotel['address1']},#{hotel['city']}, #{hotel['stateProvinceCode']} "
     %a
       %span Show at map
-      %i.icon-map-marker
+      %span.glyphicon.glyphicon-map-marker
 %p.hidden-phone
   = strip_tags(Sanitize.clean(CGI.unescapeHTML(hotel['shortDescription'])))
