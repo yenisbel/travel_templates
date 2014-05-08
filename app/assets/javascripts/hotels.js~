@@ -1,0 +1,13 @@
+$(document).ready(function () {          
+  $('#datepicker1').datepicker({
+      format: "mm/dd/yyyy"
+      startDate: "05/1/2014",
+      minViewMode: 1,
+      todayBtn: "linked",
+      autoclose: true,
+      todayHighlight: true
+  });  
+  $('#datepicker2').datepicker({
+      format: "mm/dd/yyyy"
+  });  
+});

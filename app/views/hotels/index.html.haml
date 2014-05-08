@@ -1,9 +1,15 @@
-%span.glyphicon.glyphicon-search
+
 - hotel_json city: 'Syracuse', state: 'NY', contry: 'US'
+
 .container-fluid
-  .container-fluid.col-md-2
-    = render 'search_box'
-    = render 'filter'
-  .container-fluid.col-md-10
-    - @hotels.each do |hotel|      
-      = render 'item', hotel: hotel
+ = render 'search_box'
+
+.container-fluid
+ .row
+  .col-sm-2
+   = render  'filter'
+  .col-sm-10
+   - @hotels.each do |hotel|      
+    = render 'item', hotel: hotel          
+ 
+

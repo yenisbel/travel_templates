@@ -1,3 +1,4 @@
+
 - room_json(hotel['hotelId'])
 %table.table.table-hover.table-condensed.hidden-phone
   %thead
@@ -23,12 +24,12 @@
         %td
           - paxs = 1 + rand(3)
           - 1.upto(paxs) do
-            %span.glyphicon.glyphicon-user.glyphicon-large
+            %span.glyphicon.glyphicon-user.glyphicon-large{"data-placement" => "bottom", "data-toggle" => "tooltip", title: "Adult", type: "span"}
           - childs = rand(2)
           - if childs > 0
             +
             - 1.upto(childs) do
-              %span.glyphicon.glyphicon-user.glyphicon-large
+              %span.glyphicon.glyphicon-user.glyphicon-small{"data-placement" => "bottom", "data-toggle" => "tooltip", title: "Child", type: "span"}     
         %td.text-warning
           Only #{1 +rand(5)} left
         %td.text-info
@@ -37,3 +38,4 @@
         %td
           %small
             %span.label.label-info Info & Book »
+                

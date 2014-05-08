@@ -1,14 +1,13 @@
 %ol.breadcrumb
   %li=link_to 'Home', root_path 
-  %li.active Hotels
+  %li.active Flights
 
 
 
-- hotel_json city: 'Syracuse', state: 'NY', contry: 'US'
 .container-fluid
   .container-fluid.col-sm-12
     = render 'search_box'
     =# render 'filter'
   .container-fluid.col-sm-12
-    - @hotels.each do |hotel|      
-      = render 'item', hotel: hotel
+    - @flights[0][:aeroline]      
+

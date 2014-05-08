@@ -16,5 +16,4 @@
 //= require bootstrap
 //= require bootstrap-datepicker
 //= require hotels
-//= require flights
 //= require_tree .

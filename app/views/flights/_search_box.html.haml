@@ -1,0 +1,79 @@
+.container-fluid#box
+ #message.col-sm-3
+  %label Search for flight only
+  #dividerf
+
+ #inputs.col-sm-9      
+  = form_tag("/flights", method: "get") do  
+   .row.col-sm-9.col-sm-offset-3
+    .input-group
+     %label.radio-inline
+      %input#opciones_1{checked: "checked", name: "opciones", type: "radio", value: "opcion_1"}/
+      Rountrip 
+     %label.radio-inline
+      %input#opciones_2{name: "opciones", type: "radio", value: "opcion_2"}/
+      One Way 
+     %label.radio-inline
+      %input#opciones_3{ name: "opciones", type: "radio", value: "opcion_3"}/
+      Multiple Destinations  
+   
+   
+   .row      
+    .col-sm-8
+     %label#flight-origin  
+      %label Flying from     
+      %span.glyphicon.glyphicon-plane       
+      %input{placeholder: "city or airport", type: "text"}/
+     %label#flight-destination  
+      %label Flying to    
+      %span.glyphicon.glyphicon-plane       
+      %input{placeholder: "city or airport", type: "text"}/      
+     
+    .col-sm-4
+     .input-group
+      %input#opciones_1.col-sm-2{ name: "opciones", type: "text", placeholder: "Adult"}/
+      %input#opciones_2.col-sm-2.col-sm-offset-1{ name: "opciones", type: "text", placeholder: "Child"}/
+      
+   .row.col-sm-12
+    .col-sm-6
+     %label#tiene 
+      %label Check In    
+      .input-group.date
+       %input#datepicker3.form-control{placeholder: "mm/dd/yyyy", type: "text"}/
+       %span.input-group-addon
+        %span.glyphicon.glyphicon-calendar 
+        
+    .col-sm-6
+     %label#tiene 
+      %label Check Out    
+      .input-group.date
+       %input#datepicker4.form-control{placeholder: "mm/dd/yyyy", type: "text"}/
+       %span.input-group-addon
+        %span.glyphicon.glyphicon-calendar      
+      
+     
+
+         
+     
+      
+      
+      
+      
+
+       
+      
+            
+      
+                                    
+  
+
+       
+       
+       
+
+      
+        
+               
+       
+       
+   

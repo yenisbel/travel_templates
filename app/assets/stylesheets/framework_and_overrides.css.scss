@@ -4,8 +4,63 @@
 //= depend_on_asset "bootstrap/glyphicons-halflings-regular.ttf"
 //= depend_on_asset "bootstrap/glyphicons-halflings-regular.woff"
 
-// import the CSS framework
+$brand-primary: rgb(0, 153, 255);
+$link-color: $brand-primary;
+
 @import "bootstrap";
+
+a,.text-info:hover {
+	color: $brand-primary;
+  }
+  
+a:active,a:hover{
+	outline:0
+}
+
+a:active, a:hover {
+    outline: 0px none;
+        outline-width: 0px;
+        outline-style: none;
+        outline-color: -moz-use-text-color;
+}        
+
+a:hover{
+	text-decoration: underline;
+}
+
+ 
+
+.text-info {
+  color: #000000;
+  font-weight: bold;
+}
+
+.btn{
+  font-weight: bold;
+  border: 1px solid rgb(221, 221, 221);
+  font-family: Helvetica,Arial,sans-serif;
+  border-radius: 2px;	
+} 
+
+.btn-info{
+  color: rgb(255, 255, 255);
+  white-space: nowrap;
+  background-color: rgb(0, 187, 255);
+  border-color: rgb(0, 187, 255);
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.btn-info:hover{
+	color:#fff;
+	text-decoration: none;
+}
+
+.hotel{
+    color: rgb(77, 77, 77);
+    font-size: 16px;
+    display: inline-block;
+    font-weight: bold;
+}
 
 // make all images responsive by default
 img {
@@ -15,7 +70,13 @@ img {
 // override for the 'Home' navigation link
 .navbar-brand {
   font-size: inherit;
+  
   }
+  
+.navbar-nav{
+  display: inline-block;
+
+}  
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
@@ -40,7 +101,7 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  //background-color: #eee;
+  // background-color: #eee;
   padding-bottom: 80px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
@@ -50,10 +111,37 @@ section {
   margin-top: 20px;
   }
 
-.white {
-  color: #eee; 
+.gray {
+  color: #bfbfbf; 
   }
 
 .glyphicon-large {
    font-size: small;
   }
+  
+.glyphicon-small{
+   font-size: x-small;
+}  
+
+//For change view of breadcrumb located in header
+
+#breadcrumb{
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgb(249,249,249);
+}
+
+#posicion{
+  display: inline;
+  text-align: center;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+
+#nombre{
+  margin-top: 0px;
+}
+
+
+

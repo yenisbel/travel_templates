@@ -4,5 +4,3 @@
 <li><%= link_to 'Hotels', hotels_path %></li>
 <%# add navigation links to this file %>
 <li><%= link_to 'Flights', flights_path %></li>
-
-

@@ -1,0 +1,24 @@
+require 'open-uri'
+require 'json'
+
+
+class FlightsController < ApplicationController
+  before_action :set_hotel, only: [:show, :edit, :update, :destroy]
+
+  # GET /flights
+  # GET /flights.json
+  def index   
+    puts "********** params #{params.inspect} "           
+  end
+
+  # GET /flights/1
+  # GET /flights/1.json
+  def show
+  end
+
+  # GET /flights
+  # GET /flights.json
+
+end
+
+

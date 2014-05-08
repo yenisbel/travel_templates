@@ -1,6 +1,6 @@
 %p.text-info
   Sice $ #{hotel['lowRate']} #{hotel['rateCurrencyCode']}  
   %br/
-%p.col-md-offset-1.text-info
+%p.col-md-offset-1
   Avg/night 
 %p.col-md-offset-1.btn.btn-info.btn-small{:href => "#"} Info & Book »

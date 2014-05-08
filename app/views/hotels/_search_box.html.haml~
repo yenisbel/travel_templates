@@ -1,67 +1,11 @@
-= form_tag("/hotels", method: "get") do 
-  .row
-    = text_field_tag(:q, nil, placeholder: 'Search for: Hotel, City, Address ', class: 'col-md-12 form-control' )
-  %br
-  .row
-    %h5 Check-in date 
-  .row
-    .col-md-5
-      %select.form-control{:placeholder => "1"}
-        - for i in 1..31 do
-          %option= i
-    .col-md-7
-      %select.form-control
-        %option Aug, 2013
-        %option Sep, 2013
-        %option Oct, 2013
-        %option Nov, 2013
-        %option Dec, 2013
-        %option Jan, 2014
-        %option Feb, 2014
-        %option Mar, 2014
-        %option Apr, 2014
-        %option May, 2014
-        %option Jun, 2014
-        %option Jul, 2014
-  .row
-    %h5 Check-out date
-  .row
-    .col-md-5
-      %select.form-control{:placeholder => "1"}
-        - for i in 1..31 do
-          %option= i
-    .col-md-7
-      %select.form-control
-        %option Aug, 2013
-        %option Sep, 2013
-        %option Oct, 2013
-        %option Nov, 2013
-        %option Dec, 2013
-        %option Jan, 2014
-        %option Feb, 2014
-        %option Mar, 2014
-        %option Apr, 2014
-        %option May, 2014
-        %option Jun, 2014
-        %option Jul, 2014
-
-  %br
-  - text_type = {:Adults => 2, :Children => 0, :Infant => 0}
-  - text_type.keys.each do |key|
-    .row
-      %h5.col-md-4      
-        = key      
-      .col-md-5
-        %select.form-control{:placeholder => text_type[key]}
-          - for i in 1..10 do
-            %option= i
-  %br
-  .row
-    %h5.col-md-4 Rooms
-    .col-md-5
-      %select.form-control{:placeholder => "1"}
-        - for i in 1..10 do
-          %option{:value => i}
-            = i
-  .row
-    = submit_tag("Search", :class => "button.btn.btn-primary.col-md-8.col-md-offset-1")
+.box.col-sm-12
+ #message.col-sm-3
+  Select your travel dates
+ #inputs.col-sm-9      
+  = form_tag("/hotels", method: "get") do
+   .col-sm-4
+    .col-sm-6  
+     %label.label-control.col-sm-4 Check In
+     .col-sm-8      
+      %input#datepicker1.start_date{placeholder: "click to show", type: "text"}/
+      %span.glyphicon.glyphicon-calendar.glyphicon-large

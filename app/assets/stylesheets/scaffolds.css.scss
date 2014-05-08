@@ -1,15 +1,27 @@
 body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-}
+  background-color: rgb(248,248,248);
+  color: rgb(77,77,77);
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  font-stretch: normal;
+  font-size-adjust: none;
+  border-bottom-color: rgb(77,77,77); 
+  border-left-color: rgb(77,77,77); 
+  border-right-color: rgb(77,77,77); 
+  border-top-color: rgb(77,77,77); 
+  cursor: default;
+  margin-bottom: 56px;
+ }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: Helvetica,Arial,sans-serif;
   font-size: 13px;
-  line-height: 18px;
+  line-height: 1.4;
+}
+
+p {
+   text-align: justify;  
 }
 
 pre {
@@ -18,20 +30,22 @@ pre {
   font-size: 11px;
 }
 
-a {
-  color: #000;
+a{
+  color: rgb(2,177,242);
+  text-decoration: none;
+  cursor: pointer;
   &:visited {
     color: #666;
   }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: rgb(0, 153, 255);
+    //background-color: #000;
   }
 }
 
 div {
   &.field, &.actions {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
 }
 
@@ -67,3 +81,172 @@ div {
     list-style: square;
   }
 }
+
+//Filter title and subtitle from Hotel
+
+#filter_title{
+    top: 6px;
+    left: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}    
+
+
+#filter_header{    
+    position: relative;
+    border-width: 1px 1px 0px;
+    border-style: solid solid none;
+    border-color: rgb(221, 221, 221) rgb(221, 221, 221) -moz-use-text-color;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    height: 50px;    
+}
+
+#hide_filters{
+   margin: 14px 7px 0px 0px;
+   cursor: pointer;
+   width: 18px;
+   height: 18px;
+   border-radius: 11px;
+   font-size: 13px;
+   text-align: center;
+   background: none repeat scroll 0% 0% rgb(136, 136, 136);
+   float: right;
+   margin-top: 1px;
+   position: relative;
+}
+
+reset_filters{
+   position: absolute;
+   top: 29px;
+   left: 10px;
+}
+
+#filter_subtitle{
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 7px 8px 5px 10px;
+	line-height: 1.4;
+	clear: both;
+	display: block;	
+	-moz-user-select: none;
+}
+
+//Table Filter
+
+
+
+#box{
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border-left: 3px solid rgb(249,249,249);
+  background: linear-gradient(to bottom, rgb(249,249,249) 0%, rgb(249,249,249) 100%) repeat scroll 0% 0% transparent;
+  border-bottom: 1px solid rgb(249,249,249); 
+  box-shadow: -1px 0px 0px rgb(221, 221, 221) inset, 0px -1px 0px rgb(221, 221, 221) inset, 0px 1px 0px rgb(221, 221, 221) inset;
+}
+  
+
+#message{
+	font-weight: bold;
+	text-align: center;
+	position: relative;
+    padding: 10px 0px;
+    text-transform: uppercase;
+}
+
+#title{
+   margin-bottom: 0px;
+}
+
+#dividerh{
+    display: block;
+    position: absolute;
+    top: 7px;
+    right: 0px;
+    width: 3px;
+    height: 30px;
+    background: none repeat scroll 0% 0% rgb(224, 224, 224);
+    border-right: 3px solid rgb(204,204,204);
+}
+
+#dividerf{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    width: 3px;
+    height: 70px;
+    background: none repeat scroll 0% 0% rgb(224, 224, 224);
+    border-right: 3px solid rgb(204,204,204);
+}
+
+#inputs{
+   display: inline-block;
+   padding: 5px 0px;
+}
+
+#arreglo{
+   padding: 0px 0px;
+}
+
+#arreglo1{
+   padding-right: 5px;
+}
+
+.label-control{
+    padding: 0px 0px;
+    color: rgb(77,77,77);
+}
+
+.start_date, .end_date {
+    width: 100px;
+    padding: 2px;
+}
+
+input[type="text"], select {
+    background-color: white;
+    border: 1px solid rgb(225, 225, 225);
+    color: rgb(77, 77, 77);
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.4px;
+    padding: 3px 0px;
+    -moz-box-sizing: border-box;
+}
+
+#room_count{
+    margin-left: 5px;
+}
+
+
+
+#filters{
+  float: left; 
+  opacity: 1;
+  transition: opacity 0.2s ease 0s;   
+}
+
+#filter_details{
+ box-shadow: -1px 0px 0px rgb(221, 221, 221) inset, 0px -1px 0px rgb(221, 221, 221) inset, 0px 1px 0px rgb(221, 221, 221) inset;
+ border-width: 1px 1px 0px;
+ border-style: solid solid none;
+ border-color: rgb(221, 221, 221) rgb(221, 221, 221) -moz-use-text-color;
+ -moz-border-top-colors: none;
+ -moz-border-right-colors: none;
+ -moz-border-bottom-colors: none;
+ -moz-border-left-colors: none;
+ border-image: none;
+ display: block;
+ background: linear-gradient(to bottom, rgb(249,249,249) 0%, rgb(249,249,249) 100%) repeat scroll 0% 0% transparent;
+ border-bottom: 1px solid rgb(249,249,249);  
+}
+
+
+
+

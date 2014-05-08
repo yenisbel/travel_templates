@@ -1,0 +1,47 @@
+.box.col-sm-12
+ #message.col-sm-3
+  Select your travel dates
+ #inputs.col-sm-9      
+  = form_tag("/hotels", method: "get") do
+  .col-sm-4
+   .col-sm-6  
+    %label.label-control.col-sm-4 Check In
+    .col-sm-8      
+     %input#datepicker1.start_date{placeholder: "click to show", type: "text"}/
+      %span.glyphicon.glyphicon-calendar.glyphicon-large
+   .col-sm-6
+    %label.label-control.col-sm-4 Check Out
+    .col-sm-8
+     %input#datepicker1.end_date{placeholder: "click to show", type: "text"}/ 
+      %span.glyphicon.glyphicon-calendar.glyphicon-large   
+  .col-sm-4
+   .col-sm-4
+    %label.label-control.col-sm-6 Adult
+    .col-sm-6
+     %input.adult{type: "text"}/     
+   .col-sm-4
+    %label.label-control.col-sm-6 Child
+    .col-sm-6      
+     %input.adult{type: "text"}/ 
+   .col-sm-4
+    %label.label-control.col-sm-6 Infant
+    .col-sm-6      
+     %input.adult{type: "text"}/
+  .col-sm-4
+   %label.label-control.col-sm-6 Room
+   %select#room_count.col-sm-6{:placeholder => "1"}
+    - for i in 1..10 do
+     %option= i         
+      
+ 
+       
+       
+       
+       
+
+      
+        
+               
+       
+       
+   
